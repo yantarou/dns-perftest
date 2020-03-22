@@ -1,0 +1,12 @@
+---
+version: '3.7'
+
+services:
+
+  flamethrower:
+    image: flamethrower:latest
+    network_mode: host
+    command: -f /mnt/host/query_data_files/${QUERY_DATA_FILE} ${TARGET_IP} -p ${TARGET_PORT} -l ${TIME_LIMIT} -Q ${QPS}
+
+    volumes:
+      - ..:/mnt/host

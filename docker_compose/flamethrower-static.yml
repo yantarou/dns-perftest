@@ -1,0 +1,9 @@
+---
+version: '3.7'
+
+services:
+
+  flamethrower:
+    image: flamethrower:latest
+    network_mode: host
+    command: -g static ${TARGET_IP} -p ${TARGET_PORT} -l ${TIME_LIMIT} -Q ${QPS}
