@@ -120,7 +120,7 @@ See the tools' command line options for other available options.
 
 ## Running Firefox with a specific DNS server
 
-To run `firefox` (on Linux) with a specific DNS server:
+On Linux, to run Firefox inside Docker with a specific DNS server:
 
 ```
 docker run \
@@ -132,6 +132,28 @@ docker run \
     firefox
 ```
 
+On macOS, this requires to install an X11 server, e.g. XQuartz:
+
+* https://www.xquartz.org/
+
+First, configure XQuartz to allow connections from network clients (XQuartz -> Preferences -> Security).
+
+Add you hostname to the allowed hosts:
+
+```
+xhost + $(hostname)
+```
+
+Afterwards, run the Docker container:
+
+```
+docker run \
+    --rm -it --net host \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    -e DISPLAY=$(hostname):0 \
+    --dns 127.0.0.1 \
+    firefox
+```
 
 ## Query Data Files
 
