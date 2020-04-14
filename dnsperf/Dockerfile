@@ -1,4 +1,4 @@
-FROM "debian:buster"
+FROM "debian:buster-slim"
 
 RUN apt-get update
 RUN apt-get install --yes --no-install-recommends ca-certificates gnupg wget
