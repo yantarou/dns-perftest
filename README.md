@@ -2,10 +2,11 @@
 
 ## About
 
-Docker containers and DNS query data files for testing DNS performance with `dnsperf`, `firefox`, `flamethrower`, `resperf` and `resperf-report`.
+Docker containers and DNS query data files for testing DNS performance with `dnsmeter`, `dnsperf`, `firefox`, `flamethrower`, `resperf` and `resperf-report`.
 
-* https://github.com/DNS-OARC/flamethrower
+* https://github.com/DNS-OARC/dnsmeter
 * https://github.com/DNS-OARC/dnsperf
+* https://github.com/DNS-OARC/flamethrower
 
 
 ## Preparing Git and Docker
@@ -26,6 +27,11 @@ Install Docker Compose:
 
 
 ## Building the Docker Containers
+
+```
+docker build --network host --tag dnsmeter \
+    -f dnsmeter/Dockerfile dnsmeter
+```
 
 ```
 docker build --network host --tag dnsperf \
@@ -53,6 +59,10 @@ docker build --network host --tag resperf-report \
 ```
 
 ## Testing the Docker Containers
+
+```
+docker run --rm dnsmeter -h
+```
 
 ```
 docker run --rm dnsperf -h
