@@ -1,10 +1,16 @@
 # SANS Internet Storm Center - Suspicious Domains
 
-Suspicious domain lists provided by SANS ISC:
+Note: As of 2020-07-26 SANS ISC has suspended the suspicious domains service.
+
+This repository contains the lists from 2020-04-08.
+
+## Source References
+
+SANS ISC suspicious domain lists:
 
 * https://isc.sans.edu/suspicious_domains.html
 
-SANS ISC offers three weighted lists with low, medium and high sensitivity levels:
+Separated into three weighted lists with low, medium and high sensitivity levels:
 
 * https://isc.sans.edu/feeds/suspiciousdomains_Low.txt
 

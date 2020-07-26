@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-file="suspiciousdomains_High.txt"
+file="sans-isc_suspiciousdomains-high_2020-04-08.txt"
 while read -r line; do
     [[ "$line" =~ ^#.*$ ]] && continue
-    echo "${line} A" >> suspiciousdomains_High.qd.txt
+    echo "${line} A" >> sans-isc_suspiciousdomains-high_2020-04-08.qd.txt
 done < "$file"
 
-file="suspiciousdomains_Medium.txt"
+file="sans-isc_suspiciousdomains-medium_2020-04-08.txt"
 while read -r line; do
     [[ "$line" =~ ^#.*$ ]] && continue
-    echo "${line} A" >> suspiciousdomains_Medium.qd.txt
+    echo "${line} A" >> sans-isc_suspiciousdomains-medium_2020-04-08.qd.txt
 done < "$file"
 
-file="suspiciousdomains_Low.txt"
+file="sans-isc_suspiciousdomains-low_2020-04-08.txt"
 while read -r line; do
     [[ "$line" =~ ^#.*$ ]] && continue
-    echo "${line} A" >> suspiciousdomains_Low.qd.txt
+    echo "${line} A" >> sans-isc_suspiciousdomains-low_2020-04-08.qd.txt
 done < "$file"
