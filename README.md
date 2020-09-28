@@ -118,11 +118,8 @@ docker run \
     -v $(pwd):/mnt/wd \
     -w /mnt/wd \
     resperf-report \
-        -d /mnt/query_data_files/top-100k.qd.txt \
-        -s 127.0.0.1
-
-        -s 127.0.0.1 -p 5353 -c 180 -m 10000
-        -s 127.0.0.1 -L 10 -p 5353 -c 180 -m 10000
+        -d /mnt/query_data_files/top-1m.qd.txt \
+        -s 192.0.2.1
 ```
 
 See the tools' command line options for other available options.
